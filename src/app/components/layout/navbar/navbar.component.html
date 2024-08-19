@@ -1,0 +1,85 @@
+<div class="min-h-full">
+  <nav class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <img class="h-10 w-10" src="assets/img/coffeeShop.avif" alt="Your Company">
+          </div>
+        </div>
+        <div class="hidden md:flex justify-center flex-grow">
+          <div class="flex items-baseline space-x-4">
+            <a href="#" class="rounded-none border-b-2 border-amber-900 px-3 py-2 text-md font-medium text-amber-950"
+               aria-current="page">Dashboard</a>
+            <a href="#"
+               class="rounded-none px-3 py-2 text-sm font-medium text-amber-950 hover:border-amber-900 hover:border-b-2">Team</a>
+            <a href="#"
+               class="rounded-none px-3 py-2 text-sm font-medium text-amber-950 hover:border-amber-900 hover:border-b-2">Projects</a>
+            <a href="#"
+               class="rounded-none px-3 py-2 text-sm font-medium text-amber-950 hover:border-amber-900 hover:border-b-2">Calendar</a>
+            <a href="#"
+               class="rounded-none px-3 py-2 text-sm font-medium text-amber-950 hover:border-amber-900 hover:border-b-2">Reports</a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center md:ml-6">
+            <button
+              class="align-middle select-none  font-bold text-center  transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs me-2 py-3 px-6 border-amber-900 border-2 text-amber-900 hover:text-white hover:bg-amber-900 shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-lg"
+              type="button">
+              Sign In
+            </button>
+            <button
+              class="align-middle select-none  font-bold text-center  transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 bg-amber-400 text-amber-900 hover:bg-amber-900 hover:text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-lg"
+              type="button">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <div class="-mr-2 flex md:hidden">
+          <button (click)="isMenuOpen = !isMenuOpen" type="button"
+                  class="relative inline-flex items-center justify-center rounded-md bg-amber-900 p-2 text-white hover:bg-amber-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="sr-only">Open main menu</span>
+            <svg [ngClass]="{'block': !isMenuOpen, 'hidden': isMenuOpen}" class="h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+            </svg>
+            <svg [ngClass]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                 aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div *ngIf="isMenuOpen" class="md:hidden mt-4" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="block rounded-md bg-amber-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+        <a href="#"
+           class="block rounded-none px-3 py-2 text-base font-medium text-amber-900 hover:border-b-2 hover:border-amber-900">Team</a>
+        <a href="#"
+           class="block rounded-none px-3 py-2 text-base font-medium text-amber-900 hover:border-b-2 hover:border-amber-900">Projects</a>
+        <a href="#"
+           class="block rounded-none px-3 py-2 text-base font-medium text-amber-900 hover:border-b-2 hover:border-amber-900">Calendar</a>
+        <a href="#"
+           class="block rounded-none px-3 py-2 text-base font-medium text-amber-900 hover:border-b-2 hover:border-amber-900">Reports</a>
+      </div>
+      <div class="ml-4 flex items-center md:ml-6">
+        <button
+          class="align-middle select-none  font-bold text-center  transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs me-2 py-3 px-6 border-amber-900 border-2 text-amber-900 hover:text-white hover:bg-amber-900 shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-lg"
+          type="button">
+          Sign In
+        </button>
+        <button
+          class="align-middle select-none  font-bold text-center  transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 bg-amber-400 text-amber-900 hover:bg-amber-900 hover:text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none rounded-lg"
+          type="button">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>
