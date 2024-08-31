@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgClass, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import {LoginPositionService} from "../../../shared/service/commun/login-position/login-position.service";
 
 @Component({
   selector: 'app-navbar',
@@ -16,8 +17,14 @@ import {RouterLink} from "@angular/router";
 export class NavbarComponent {
   isMenuOpen = false;
 
-  public goSignUp() {
+  constructor(private loginPositionService: LoginPositionService) {
+  }
 
+  public goSignUp() {
+    this.loginPositionService.position = "right-panel-active";
+  }
+  public goSignIn() {
+    this.loginPositionService.position = "";
   }
 
 }
